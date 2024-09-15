@@ -1,19 +1,32 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set the body background, font, and color scheme */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+background: #fff1ce;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #fff7e2;
+}
+
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #fff9e9;
-    color: #2d2d2d;
+    background-color: #2d2d2d;
+    color: #fff1ce;
     line-height: 1.6;
 }
 
-/* Full-screen height sections */
 .full-screen {
     height: 100vh;
     display: flex;
@@ -23,42 +36,42 @@ body {
     text-align: center;
 }
 
-/* Navbar styling */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #fff9e9;
-    padding: 10px 50px; /* Added padding for a wider layout */
+    background-color: #2d2d2d;
+    padding: 10px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     width: 100%;
-    justify-content: space-between; /* Ensure items are spaced evenly across the navbar */
+    justify-content: space-between;
 }
 
 nav ul li {
-    flex: 1; /* Each list item takes up an equal amount of space */
-    text-align: center; /* Center text inside each list item */
+    flex: 1;
+    text-align: center;
 }
 
 nav ul li a {
-    color: #2d2d2d;
+    color: #fff1ce;
     text-decoration: none;
     font-size: 1.5rem;
     display: block;
-    padding: 10px; /* For a larger clickable area */
+}
+nav ul li a img {
+    height: 30px;
 }
 
-/* Title Section */
 .title-container h1 {
-    font-size: 10rem;
+    font-size: 15rem;
     font-weight: 400;
-    margin-top: -20px;
+    margin-top: -100px;
 }
 
 .title-container h2 {
@@ -69,11 +82,20 @@ nav ul li a {
 }
 
 /* Coding Journey Section */
+.coding-journey {
+    padding: 100px;
+}
+
 .coding-journey h3 {
     padding-top: 2rem;
     font-size: 5rem;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+.coding-journey h3 a {
+    text-decoration: none;
+    color: #fff1ce;
 }
 
 .coding-journey p {
@@ -82,24 +104,38 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.coding-journey img {
-    justify-self: left;
-    max-width: 400px;
-    border-radius: 10px;
-    margin: 20px 0;
+.coding-journey div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.coding-journey ul {
+.coding-journey div img {
+    justify-self: left;
+    width: 600px;
+    border-radius: 8px;
+    margin: 80px 100px 80px 0;
+}
+
+.coding-journey div ul {
+    text-align: left;
     list-style: none;
     font-size: 2rem;
+    margin: 0 50px;
 }
 
-.coding-journey ul li a {
-    color: #2d2d2d;
+.coding-journey div ul li {
+    padding-top: 10px;
+}
+
+.coding-journey div ul li a {
+    color: #fff1ce;
     text-decoration: none;
 }
 
-/* Hello Section */
+/* Hello Section & Connect Section */
+
 .hello-section h1, .connect-section h1 {
     font-size: 10rem;
     padding-top: 2rem;
@@ -109,19 +145,11 @@ nav ul li a {
 
 .hello-section p, .connect-section p {
     font-size: 2rem;
-    margin-top: 20px;
-    line-height: 2rem;
+    margin-top: 80px;
+    line-height: 4rem;
 }
 
-.sorry {
-    background-color: #2d2d2d;
-}
-
-.sorry p {
-    justify-content: center;
-    color: #fff9e9;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 20px;
-    line-height: 2rem;
+.connect-section p a {
+    text-decoration: none;
+    color: #fff1ce;
 }
